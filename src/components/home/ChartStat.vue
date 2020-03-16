@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800">
         <div class="inline-block relative w-64">
             <select v-model="selectedID" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                 <option v-for="(cn, idx) in countries" :key="idx" :value="cn.value" >{{ cn.title }}</option>

@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800">
         <img class="w-full" :src="countryID == '' ? `https://covid19.mathdro.id/api/og` : `https://covid19.mathdro.id/api/countries/${countryID}/og`" alt="Sunset in the mountains">
         <div class="px-6 py-4">
             <p class="text-white text-xs">
