@@ -5,6 +5,11 @@ import Home from '../views/Home/Index.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {   
+    path: '/index.html',
+    component: Home,
+    alias: '/'
+  },
   {
     path: '/',
     name: 'Home',

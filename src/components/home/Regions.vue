@@ -139,13 +139,13 @@ export default {
     background-color: red;
 }
 .rate-recover {
-    background-color: green;
+    background-color: #06ca52;
 }
 .fatality {
     color: red;
 }
 .recover {
-    color: green;
+    color: #06ca52;
 }
 .updated {
     font-size: 10px;
