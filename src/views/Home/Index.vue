@@ -2,20 +2,20 @@
   <div class="wrapper">
     <nav>
       <ul style="display: flex; justify-content: space-between">
-        <li>Covid Monitor</li>
         <li>
-          <a href="" target="_blank">Contribute</a>
+          <img src="/img/logo.png" style="width: 40px; display: inline" alt="">
+          <span style="display: inline">Covid Monitor</span>
+        </li>
+        <li>
+          <a href="https://github.com/burhanahmeed/covidmonitor" target="_blank">Contribute</a>
         </li>
       </ul>
     </nav>
-    <div class="grid grid-cols-6 gap-4">
-      <div class="col-span-6 xs:col-span-6 sm:col-span-2 md:col-span-2 lg:col-span-2...">
-        <global-data style="margin: 20px" :countryID="selectedCountry" />
-        <chart-stat style="margin: 20px" @selectcountry="changeCountry" />
-      </div>
-      <div class="col-span-6 xs:col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-4...">
-
-      </div>
+    <div class="">
+      <global-data style="margin: 20px" countryID="" />
+      <regions-data style="margin: 20px" />
+      <daily-updates style="margin: 20px" />
+      <!-- <chart-stat style="margin: 20px" @selectcountry="changeCountry" /> -->
     </div>
   </div>
 </template>
@@ -24,7 +24,8 @@
 // @ is an alias to /src
 
 import GlobalData from '@/components/home/Global'
-import ChartStat from '@/components/home/ChartStat'
+import RegionsData from '@/components/home/Regions'
+import DailyUpdates from '@/components/home/DailyUpdates'
 
 export default {
   name: 'Index',
@@ -40,7 +41,8 @@ export default {
   },
   components: {
     GlobalData,
-    ChartStat
+    RegionsData,
+    DailyUpdates
   }
 }
 </script>
@@ -48,8 +50,11 @@ export default {
 
 <style scoped>
 .wrapper {
-  margin: 0;
+  margin: auto;
   padding: 0;
+  max-width: 400px;
+  display: block;
+  position: relative;
 }
 nav {
   background-color: #013243;

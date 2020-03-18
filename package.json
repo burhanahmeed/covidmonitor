@@ -11,6 +11,8 @@
     "chart.js": "^2.9.3",
     "core-js": "^3.6.4",
     "register-service-worker": "^1.6.2",
+    "timeago.js": "^4.0.2",
+    "v-select2-component": "^0.4.1",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.0",
     "vue-router": "^3.1.5",
