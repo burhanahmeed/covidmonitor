@@ -11,11 +11,17 @@
         </li>
       </ul>
     </nav>
-    <div class="">
+    <div class="conten">
       <global-data style="margin: 20px" countryID="" />
       <regions-data style="margin: 20px" />
       <daily-updates style="margin: 20px" />
       <!-- <chart-stat style="margin: 20px" @selectcountry="changeCountry" /> -->
+    </div>
+    <div class="menu">
+      <div class="menu-wrapper">
+        <router-link to="/">Menu</router-link>
+        <router-link to="/map">Map cases</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -76,5 +82,25 @@ li a  {
 }
 li a:hover {
   color: #ebebeb;
+}
+.menu {
+  position: fixed;
+  max-width: 400px;
+  width: 100%;
+  bottom: 0;
+  padding: 15px;
+  color: white;
+}
+.menu-wrapper {
+  background-color: #2d3748;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: space-around;
+  display: flex;
+}
+.conten {
+  padding-bottom: 60px;
 }
 </style>

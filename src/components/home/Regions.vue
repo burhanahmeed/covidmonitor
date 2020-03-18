@@ -75,6 +75,7 @@ export default {
         }
     },
     mounted () {
+        this.selectedID = 'ID';
         axios.get('https://covid19.mathdro.id/api/countries').then(res => {
             let cn = res.data.countries;
             for (const key in cn) {

@@ -33,6 +33,6 @@ export default {
 <style scoped>
 .updates {
     max-height: 400px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 </style>
