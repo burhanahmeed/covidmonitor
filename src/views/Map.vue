@@ -9,8 +9,12 @@
         :lat-lng="c.center"
         :radius="c.radius"
         :color="c.color"
+        @click="selectPoint(c)"
         />
     </l-map>
+    <div>
+      <detail-map @closedetail="closedPoint" :props="{ 'payload': selectedData }" />
+    </div>
   </div>
 </template>
 
@@ -19,8 +23,11 @@ import {LMap, LTileLayer, LCircle} from 'vue2-leaflet';
 import axios from 'axios'
 import 'leaflet/dist/leaflet.css';
 
+import DetailMap from '../components/map/Details'
+
 export default {
   components: {
+    DetailMap,
     LMap,
     LTileLayer,
     LCircle
@@ -34,8 +41,9 @@ export default {
         center: [30.9756403482891, 112.270692167452],
         radius: 4500,
         color: 'red'
-      }]
-    };
+      }],
+      selectedData: false
+    }
   },
   mounted () {
     this.circle = [];
@@ -45,11 +53,26 @@ export default {
         this.circle.push({
           center: [temp[index].lat, temp[index].long],
           radius: 50000,
-          color: 'red'
+          color: 'red',
+          confirmed: temp[index].confirmed,
+          recovered: temp[index].recovered,
+          deaths: temp[index].deaths,
+          active: temp[index].active,
+          lastUpdate: temp[index].lastUpdate,
+          country: temp[index].countryRegion,
+          region: temp[index].provinceState
         });  
       }
       
     })
+  },
+  methods: {
+    selectPoint (val) {
+      this.selectedData = val;
+    },
+    closedPoint () {
+      this.selectedData = false;
+    }
   }
 }
 </script>
