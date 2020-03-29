@@ -5,7 +5,7 @@
         <li>
           <span class="text-label" style="font-size: 11px">Current outbreak</span>
           <h3 class="text-label title">COVID-19</h3>
-          <span class="text-detail">We gather data API from various sources.</span>
+          <span class="text-detail">We gather the data from various API data sources.</span>
         </li>
         <li>
           <a href="https://github.com/burhanahmeed/covidmonitor" target="_blank">
