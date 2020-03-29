@@ -1,6 +1,6 @@
 <template>
-     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800">
-         <span style="padding: 5px; color: white; font-size: 13px; font-weight: 700">Daily updates</span>
+     <div class="max-w-sm rounded overflow-hidden shadow-lg">
+         <span style="padding: 5px; font-size: 13px; font-weight: 700">Daily updates</span>
         <div class="updates">
             <items v-for="(i, idx) in dailyData" :key="idx" :props="{ 'payload': i }" />
         </div>

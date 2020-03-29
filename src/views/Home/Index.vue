@@ -3,26 +3,25 @@
     <nav>
       <ul style="display: flex; justify-content: space-between">
         <li>
-          <img src="/img/logo.png" style="width: 40px; display: inline" alt="">
-          <span style="display: inline">Covid Monitor</span>
+          <span class="text-label" style="font-size: 11px">Current outbreak</span>
+          <h3 class="text-label title">COVID-19</h3>
+          <span class="text-detail">We gather data API from various sources.</span>
         </li>
         <li>
-          <a href="https://github.com/burhanahmeed/covidmonitor" target="_blank">Contribute</a>
+          <a href="https://github.com/burhanahmeed/covidmonitor" target="_blank">
+            <img src="/img/header_icon.png" alt="">
+          </a>
         </li>
       </ul>
     </nav>
     <div class="conten">
+      <online-test style="margin: 20px" />
       <global-data style="margin: 20px" countryID="" />
       <regions-data style="margin: 20px" />
       <daily-updates style="margin: 20px" />
       <!-- <chart-stat style="margin: 20px" @selectcountry="changeCountry" /> -->
     </div>
-    <div class="menu">
-      <div class="menu-wrapper">
-        <router-link to="/">Menu</router-link>
-        <router-link to="/map">Map cases</router-link>
-      </div>
-    </div>
+
   </div>
 </template>
 
@@ -32,6 +31,7 @@
 import GlobalData from '@/components/home/Global'
 import RegionsData from '@/components/home/Regions'
 import DailyUpdates from '@/components/home/DailyUpdates'
+import OnlineTest from '@/components/home/OnlineTest'
 
 export default {
   name: 'Index',
@@ -48,7 +48,8 @@ export default {
   components: {
     GlobalData,
     RegionsData,
-    DailyUpdates
+    DailyUpdates,
+    OnlineTest
   }
 }
 </script>
@@ -61,44 +62,40 @@ export default {
   max-width: 400px;
   display: block;
   position: relative;
+  background-color: white;
 }
 nav {
-  background-color: #013243;
-  padding: 1px;
+  padding: 10px;
   padding-right: 10px;
 }
 li {
-  list-style: none;
-  color: white;
+  list-style: none;  
   position: relative;
   display: inline;
   margin: 5px;
+  line-height: normal;
 }
 li a  {
-  text-decoration: none;
-  color: white;
+  text-decoration: none;  
   font-weight: 700;
   transition: color .3s ease-in-out;
 }
 li a:hover {
   color: #ebebeb;
 }
-.menu {
-  position: fixed;
-  max-width: 400px;
-  width: 100%;
-  bottom: 0;
-  padding: 15px;
-  color: white;
+.text-label {
+  font-weight: 800;
+  color: black;
 }
-.menu-wrapper {
-  background-color: #2d3748;
-  border-radius: 5px;
-  border: 1px solid grey;
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  justify-content: space-around;
-  display: flex;
+.title {
+  font-size: 25px;
+}
+.text-detail {
+  font-size: 9px;
+  color: grey;
+}
+li a img {
+  height: 25px;
 }
 .conten {
   padding-bottom: 60px;
