@@ -119,14 +119,15 @@ export default {
                     id: cn[key]
                 })
             }
-        })
-        axios.get(`https://covid19.mathdro.id/api`).then(res => {
-            let temp = res.data;
-            this.number.cases = temp.confirmed.value;
-            this.number.recover = temp.recovered.value;
-            this.number.deaths = temp.deaths.value;
-            this.number.lastUpdate = temp.lastUpdate;
-        })
+        });
+        this.changeData('ID');
+        // axios.get(`https://covid19.mathdro.id/api`).then(res => {
+        //     let temp = res.data;
+        //     this.number.cases = temp.confirmed.value;
+        //     this.number.recover = temp.recovered.value;
+        //     this.number.deaths = temp.deaths.value;
+        //     this.number.lastUpdate = temp.lastUpdate;
+        // })
     },
     computed: {
         fatality () {
