@@ -6,6 +6,7 @@
           <span class="text-label" style="font-size: 11px">Current outbreak</span>
           <h3 class="text-label title">COVID-19</h3>
           <span class="text-detail">We gather the data from various API data sources.</span>
+          <span class="new-date">{{ new Date() | date }}</span>
         </li>
         <li>
           <a href="https://github.com/burhanahmeed/covidmonitor" target="_blank">
@@ -33,6 +34,8 @@ import RegionsData from '@/components/home/Regions'
 import DailyUpdates from '@/components/home/DailyUpdates'
 import OnlineTest from '@/components/home/OnlineTest'
 
+import * as dayjs from 'dayjs'
+
 export default {
   name: 'Index',
   data () {
@@ -50,6 +53,11 @@ export default {
     RegionsData,
     DailyUpdates,
     OnlineTest
+  },
+  filters: {
+    date (val) {
+      return dayjs(val).format('dddd, D MMM YYYY');
+    }
   }
 }
 </script>
@@ -99,5 +107,11 @@ li a img {
 }
 .conten {
   padding-bottom: 60px;
+}
+.new-date {
+  display: block;
+  font-weight: 800;
+  font-size: 17px;
+  margin-top: 10px;
 }
 </style>
