@@ -1,37 +1,8 @@
 <template>
-    <!-- <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800 px-1 py-1">
-        <span style="font-weight: 700; color: white; font-size: 13px">Filter by country</span>
-        <div style="padding: 20px">
-            <v-select style="background-color: white; width: 250px" v-model="selectedID" :options="countries"></v-select>
-            <div class="stat-zone">
-                <div class="cases">
-                    <label for="">Cases</label>
-                    <span>{{ number.cases | format }}</span>
-                </div>
-                <div class="cases outside">
-                    <div class="recover outside-rate">
-                        <label for="">Recover</label>
-                        <span>{{ number.recover | format }}</span>
-                        <span class="rate rate-recover">{{ recover }}% recovery rate</span>
-                    </div>
-                    <div class="fatality outside-rate">
-                        <label for="">Deaths</label>
-                        <span>{{ number.deaths | format }}</span>
-                        <span class="rate rate-fatal">{{ fatality }}% fatality rate</span>
-                    </div>
-                </div>
-                <div class="updated">
-                    <span>Last update {{ number.lastUpdate | timeago }}</span>
-                </div>
-            </div>
-        </div>
-        
-    </div> -->
     <div>
         <div class="section title">
             <h2 style="font-weight: 800">Covid-19 Indonesia Update</h2>
             <span class="detail">Last updated {{ number.lastUpdate | timeago }}</span>
-            <span class="link"><router-link to="/map">View Map >></router-link></span>
         </div>
         <div class="cases">
             <div class="box orange">
@@ -235,12 +206,5 @@ h2 {
 }
 .red {
     color: #f74848;
-}
-.link {
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px 0;
-    color: #238cf0;
 }
 </style>

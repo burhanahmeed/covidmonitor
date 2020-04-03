@@ -3,6 +3,7 @@
         <div class="section title">
             <h2>Covid-19 Global Update</h2>
             <span class="detail">Last updated {{ lastUpdated | timeago }}</span>
+            <span class="link"><router-link to="/map">View Map >></router-link></span>
         </div>
         <div class="cases">
             <div class="box orange">
@@ -98,5 +99,12 @@ h2 {
 }
 .red {
     color: #f74848;
+}
+.link {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #238cf0;
 }
 </style>

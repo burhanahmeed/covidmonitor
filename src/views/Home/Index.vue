@@ -21,6 +21,7 @@
       <regions-data style="margin: 20px" />
       <daily-updates style="margin: 20px" />
       <!-- <chart-stat style="margin: 20px" @selectcountry="changeCountry" /> -->
+      <external-link style="margin: 20px" />
     </div>
 
   </div>
@@ -33,6 +34,7 @@ import GlobalData from '@/components/home/Global'
 import RegionsData from '@/components/home/Regions'
 import DailyUpdates from '@/components/home/DailyUpdates'
 import OnlineTest from '@/components/home/OnlineTest'
+import ExternalLink from '@/components/home/ExternalLink'
 
 import * as dayjs from 'dayjs'
 
@@ -52,7 +54,8 @@ export default {
     GlobalData,
     RegionsData,
     DailyUpdates,
-    OnlineTest
+    OnlineTest,
+    ExternalLink
   },
   filters: {
     date (val) {
