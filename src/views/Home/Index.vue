@@ -70,7 +70,7 @@ export default {
 .wrapper {
   margin: auto;
   padding: 0;
-  max-width: 400px;
+  max-width: 450px;
   display: block;
   position: relative;
   background-color: white;
