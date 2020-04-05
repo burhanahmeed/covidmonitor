@@ -21,6 +21,7 @@
       <regions-data style="margin: 20px" />
       <daily-updates style="margin: 20px" />
       <!-- <chart-stat style="margin: 20px" @selectcountry="changeCountry" /> -->
+      <navigator-comp style="margin: 20px" :options="{ 'title': 'Check Southeast Asia ranking', 'path': '/continent' }" />
       <external-link style="margin: 20px" />
     </div>
 
@@ -35,6 +36,7 @@ import RegionsData from '@/components/home/Regions'
 import DailyUpdates from '@/components/home/DailyUpdates'
 import OnlineTest from '@/components/home/OnlineTest'
 import ExternalLink from '@/components/home/ExternalLink'
+import Navigator from '@/components/home/Navigator'
 
 import * as dayjs from 'dayjs'
 
@@ -55,7 +57,8 @@ export default {
     RegionsData,
     DailyUpdates,
     OnlineTest,
-    ExternalLink
+    ExternalLink,
+    'navigator-comp': Navigator
   },
   filters: {
     date (val) {

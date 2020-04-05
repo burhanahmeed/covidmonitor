@@ -81,7 +81,7 @@ export default {
 .wrapper {
   margin: auto;
   padding: 0;
-  max-width: 400px;
+  max-width: 450px;
   display: block;
   position: relative;
   overflow: hidden;
@@ -89,7 +89,7 @@ export default {
 }
 .header {
   position: fixed;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   padding: 10px;
   background-color: #2c3e50;
