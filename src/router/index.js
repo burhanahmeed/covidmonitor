@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home/Index.vue'
 import Continent from '../views/Continent.vue'
+import Bingmap from '../views/BingMap.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,11 @@ const routes = [
     name: 'Continent',
     component: Continent
   },
+  {
+    path: '/bing-map',
+    name: 'Bing Map',
+    component: Bingmap
+  }
 ]
 
 const router = new VueRouter({
