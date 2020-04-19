@@ -47,7 +47,7 @@ export default {
 .detail-wrapper {
     background-color: #2c3e50;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     position: absolute;
     bottom: 0;
     z-index: 999999;

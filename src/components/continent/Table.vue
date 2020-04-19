@@ -41,7 +41,7 @@ import axios from 'axios'
 export default {
     data () {
         return {
-            code: ['MY', 'PH', 'ID', 'TH', 'SG', 'VN', 'KH', 'BN', 'MM', 'LA', 'TL'],
+            code: ['MY', 'PH', 'ID', 'TH', 'SG', 'VN', 'KH', 'BN', 'MM', 'TL', '418'],
             data: []
         }
     },
@@ -60,11 +60,27 @@ export default {
         async init () {
             let datas = [];
             for (const cn of this.code) {
-                let { data } = await axios.get(`https://corona.lmao.ninja/countries/${cn}`);
+                let { data } = await axios.get(`https://corona.lmao.ninja/v2/countries/${cn}?yesterday=true`);
                 datas.push(data);
                 // console.log(data)
             }
-            this.data = datas;
+            this.data = this.selectionSort(datas);
+        },
+        selectionSort(arr){
+          var minIdx, temp, 
+          len = arr.length;
+          for(var i = 0; i < len; i++){
+            minIdx = i;
+            for(var  j = i+1; j<len; j++){
+               if(arr[j].cases>arr[minIdx].cases){
+                  minIdx = j;
+               }
+            }
+            temp = arr[i];
+            arr[i] = arr[minIdx];
+            arr[minIdx] = temp;
+          }
+          return arr;
         }
     }
 }

@@ -6,7 +6,7 @@
             <img class="arrow-down" src="/img/arrowup.svg" alt="arrow down" v-if="isOpen">
         </div>
         <div :class="{'content-wrap': true, 'open': isOpen}">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="rounded overflow-hidden shadow-lg">
                 <div class="updates">
                     <items v-for="(i, idx) in dailyData" :key="idx" :props="{ 'payload': i }" />
                 </div>
