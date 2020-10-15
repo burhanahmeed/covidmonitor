@@ -34,3 +34,5 @@ A page that displays a ranking of the most infections of _coronavirus diseases_ 
 
 ## Feature
 * [x] Responsive Design
+* [x] PWA ready
+* [x] Global data & Indonesia data
