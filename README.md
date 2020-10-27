@@ -28,9 +28,9 @@ Is an embedded widget from _[bing](https://www.bing.com/covid/dev)_
 A page that displays a ranking of the most infections of _coronavirus diseases_ in the __Southeast Asia__ region
 
 ## Used
-* git clone https://github.com/burhanahmeed/covidmonitor.git
-* npm install
-* npm start
+* `git clone https://github.com/burhanahmeed/covidmonitor.git`
+* `npm install`
+* `npm start`
 
 ## Feature
 * [x] Responsive Design
